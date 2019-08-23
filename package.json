@@ -15,7 +15,8 @@
     "develop": "yarn run:development",
     "develop:fbinstant": "yarn run run:production --env.isFbinstant=true",
     "run:development": "webpack-dev-server --config .webpack/config.js --env.env=development",
-    "run:production": "webpack-dev-server --https --config .webpack/config.js --env.env=production"
+    "run:production": "webpack-dev-server --https --config .webpack/config.js --env.env=production",
+    "archive": "webpack --config .webpack/archive.js"
   },
   "husky": {
     "hooks": {
@@ -51,10 +52,12 @@
     "tslint-eslint-rules": "^5.4.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.5.3",
+    "uuid": "^3.3.3",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "zip-webpack-plugin": "^3.0.0"
   },
   "engines": {
     "node": ">=10.15.3",
