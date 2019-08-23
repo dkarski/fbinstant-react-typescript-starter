@@ -1,0 +1,63 @@
+{
+  "name": "fbinstant-react-typescript-starter",
+  "description": "React Starter Kit is an opinionated boilerplate for fbinstant development built on top of React, TypeScript and styled-components, containing modern web development tool such as Webpack. Helping you to stay productive following the best practices. A solid starting point for both professionals and newcomers to the industry.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkarski/fbinstant-react-typescript-starter.git"
+  },
+  "license": "MIT",
+  "author": "Daniel Karski",
+  "contributors": [
+    "Daniel Karski (https://github.com/dkarski)"
+  ],
+  "scripts": {
+    "build": "webpack --config .webpack/config.js  --env.env=production",
+    "develop": "yarn run:development",
+    "develop:fbinstant": "yarn run run:production --env.isFbinstant=true",
+    "run:development": "webpack-dev-server --config .webpack/config.js --env.env=development",
+    "run:production": "webpack-dev-server --https --config .webpack/config.js --env.env=production"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,html}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^4.1.18",
+    "@types/styled-system": "^5.1.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "dotenv-webpack": "^1.7.0",
+    "html-webpack-plugin": "^4.0.0-beta.8",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
+    "open": "^6.4.0",
+    "prettier": "^1.18.2",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=10.15.3",
+    "npm": ">=6.4.1"
+  }
+}

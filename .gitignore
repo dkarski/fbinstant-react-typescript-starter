@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+
+# misc
+.DS_Store
+.env
+.env.default
+/bin
+
+/public
+yarn-error.log
