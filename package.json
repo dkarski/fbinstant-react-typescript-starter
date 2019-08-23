@@ -14,7 +14,8 @@
     "build": "webpack --config .webpack/config.js  --env.env=production",
     "develop": "webpack-dev-server --config .webpack/config.js --env.env=development",
     "develop:fbinstant": "webpack-dev-server --https --config .webpack/fbinstant.js",
-    "archive": "webpack --config .webpack/archive.js"
+    "archive": "webpack --config .webpack/archive.js",
+    "upload": "node .webpack/upload.bootstrap.js"
   },
   "husky": {
     "hooks": {
@@ -44,6 +45,7 @@
     "lint-staged": "^9.2.3",
     "open": "^6.4.0",
     "prettier": "^1.18.2",
+    "request": "^2.88.0",
     "ts-loader": "^6.0.4",
     "tslint": "^5.19.0",
     "tslint-config-prettier": "^1.18.0",

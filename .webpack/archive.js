@@ -10,7 +10,7 @@ module.exports = () => {
     plugins: [
       new ZipPlugin({
         path: `${__dirname}/../archives`,
-        filename: `${uuidv1()}.zip`,
+        filename: process.env.UUID ? `${process.env.UUID}.zip` : `${uuidv1()}.zip`,
       }),
     ],
   });
